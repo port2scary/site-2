@@ -25,5 +25,10 @@ target="_blank">MY DISCORD.</a></p>
 <head>
 <title>ㅤ</title>
 </head>        
-<iframe src="audio/song.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>            
+<iframe src="audio/song.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('ID').play();
+    document.removeEventListener('click', musicPlay);
+}           
 </html>
