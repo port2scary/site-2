@@ -28,7 +28,7 @@ target="_blank">MY DISCORD.</a></p>
 <iframe src="audio/song.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>
 document.addEventListener('click', musicPlay);
 function musicPlay() {
-    document.getElementById('ID').play();
+    document.getElementById('iframeAudio').play();
     document.removeEventListener('click', musicPlay);
 }           
 </html>
