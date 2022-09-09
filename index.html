@@ -3,10 +3,34 @@
     <title> <3 </title>
   </head>
   <body style="background-color:#000000;">
- <audio id="love" src="love.mp3" preload="auto">
-	Your browser does not support the <code>audio</code> element.
-</audio>
-
-<div class="buttons">
-  <button id="play">Play 1</button>
-</div>
+<head>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <style type="text/css">audio {display: none;}</style>
+</head>
+<body>
+<ul id="nav-two" class="nav">
+    <li>
+        <a href="#">Home</a>
+        <audio id="sound" controls preload="auto"><source src="http://soundbible.com/mp3/MP5_SMG-GunGuru-703432894.mp3" controls></source></audio>
+    </li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Clients</a></li>
+    <li><a href="#">Contact Us</a></li>
+</ul>
+<script>
+$("#nav-two a")
+  .each(function(i) {
+    if (i != 0) {
+      $("#sound")
+        .clone()
+        .attr("id", "sound" + i)
+        .appendTo($(this).parent());
+    }
+    $(this).data("beep", i);
+  })
+  .mouseenter(function() {
+    $("#sound" + $(this).data("beep"))[0].play();
+  });
+$("#sound").attr("id", "sound0");
+</script>
+</body>
