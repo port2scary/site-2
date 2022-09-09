@@ -3,11 +3,10 @@
     <title> <3 </title>
   </head>
   <body style="background-color:#000000;">
-  </body>
-<script type="text/javascript" src="sound-onclick.js"></script>
-<audio>
-<source src="love.mp3" type="audio/mpeg">
-<source src="love.ogg" type="audio/ogg">
+ <audio id="love" src="love.mp3" preload="auto">
+	Your browser does not support the <code>audio</code> element.
 </audio>
-<div id="sounddiv"><bgsound id="sound"></div>
-<div OnClick="playclip();" style="border: #000000 1px solid; background-color: #000000; width: 100px; padding: 8px; text-align: center; margin: 0 auto; cursor: pointer;">click me</div>
+
+<div class="buttons">
+  <button id="play">Play 1</button>
+</div>
