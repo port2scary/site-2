@@ -27,6 +27,14 @@
 <div id="enter"><b class="begin">Click To Enter</b></div>
 <div id="main">
 <center><h3>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>
+$(document).ready(function() {
+	$.getJSON('https://jsonip.com?callback=?', function (data) {
+      $('#ip-address').text(data.ip);
+  });	
+});
+</script>
     port</a><br>
     </a><br>
     <a href="https://www.youtube.com/channel/UCzJNZZWWgBDh_aZSvYFeqeA" target="_blank"> YouTube</a><br>
